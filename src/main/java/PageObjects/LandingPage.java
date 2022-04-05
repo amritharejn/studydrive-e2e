@@ -14,11 +14,13 @@ public class LandingPage {
 
 	private WebDriver driver;
 
-	public LandingPage(WebDriver driver) {
+	public LandingPage(WebDriver driver)
+	{
 		this.driver=driver;
 	}
 
-	public void navigate() {
+	public void navigate()
+	{
 		driver.get("https://www.studydrive.net/");
 	}
 
@@ -28,7 +30,7 @@ public class LandingPage {
 		//source: https://serveanswer.com/questions/i-cant-click-a-button-with-selenium-python
 		WebElement acceptCookie = (WebElement)((JavascriptExecutor)driver)
 				.executeScript("return document.querySelector(\"#usercentrics-root\").shadowRoot.querySelector(\"#uc-center-container > div:nth-child(2) div > button:nth-child(3)\")");
-		acceptCookie.click();
+		if(acceptCookie != null) acceptCookie.click();
 	}
 
 	public WebElement getLogin() throws InterruptedException {

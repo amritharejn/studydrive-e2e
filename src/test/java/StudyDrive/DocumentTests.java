@@ -18,18 +18,13 @@ public class DocumentTests extends Base {
 		_driver = getDriver();
         _document = new DocumentPage(_driver);
 		_landingPage = new LandingPage(_driver);
-		_loginPage = new LoginPage(_driver);
+		_loginPage = new LoginPage(_driver, _landingPage);
 
 	}
 
 	@Test
 	public void DocumentVerification() throws InterruptedException {
-		_landingPage.navigate();
-		_landingPage.getLogin().click();
-
-		_loginPage.getEmail().sendKeys("testemailSD1@gmail.com");
-		_loginPage.getPassword().sendKeys("Password@SD1");
-		_loginPage.loginClick().click();
+		_loginPage.login("testemailSD1@gmail.com", "Password@SD1");
 
 		_document.navigateTo("en", "amritha-coverletter-1", "1296521");
 

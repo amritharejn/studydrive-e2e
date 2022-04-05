@@ -23,7 +23,8 @@ public class Base {
 
 	private WebDriver driver;
 
-	public WebDriver getDriver() {
+	public WebDriver getDriver()
+	{
 		return driver;
 	}
 
@@ -51,6 +52,6 @@ public class Base {
 		}
 
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.manage().deleteAllCookies();
+		//driver.manage().deleteAllCookies();
 	}
 }
