@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="StudyDrive.HomePage">
+      <class name="StudyDrive.SearchTests">
         <methods>
           <include name="basePageNavigation"/>
         </methods>
-      </class> <!-- StudyDrive.HomePage -->
+      </class> <!-- StudyDrive.SearchTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
